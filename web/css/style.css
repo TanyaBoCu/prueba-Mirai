@@ -1,0 +1,219 @@
+@font-face {
+    font-family: Mirai;
+    src: url('../font/mirai-icofonts.eot'),
+     url('../font/mirai-icofonts.svg'),
+     url('../font/mirai-icofonts.ttf'),
+     url('../font/mirai-icofonts.woff');
+}
+
+
+*{
+	margin:0;
+	padding:0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100%;  
+    font-family: 'Mirai', sans-serif;  
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -300px;
+}
+
+.title {
+    font-size: 70px;
+    color: white;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    height: 50vh;
+}
+
+.foto {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-image: url("../img/img1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    text-align: left;
+    width: 500px;
+    height: 300px;
+}
+
+.tooltip-container {
+    position: relative;
+}
+
+.button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: bold;
+    width: 50%;
+    cursor: pointer;
+}
+
+.tooltip-container .tooltip {
+    position: absolute;
+    display: none;
+    padding: 30px 15px 15px;
+    border: 5px solid black;
+    background-color: white;
+}
+
+.tooltip-container .tooltip .close-tooltip {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 30px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.tooltip-container .tooltip .tooltip-arrow {
+    position: absolute;
+    bottom:-19px;
+    left: 30px;
+    display: block;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    transform: rotate(-45deg);
+}
+
+.ventajas {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    background-color: black;
+    padding: 70px 0;
+}
+
+.ventajas .h2Ventajas {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    width: 50%;
+}
+
+.ventajas .icons {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 70%;
+    text-align: center;
+    color: white;
+}
+
+.ventajas .icon {
+    font-size: 60px;
+}
+
+.icon-parking::before {
+    content: "\ea45";
+}
+
+.icon-piscina::before {
+    content: "\ea34";
+}
+
+.icon-bicis::before {
+    content: "\e93b";
+}
+
+.icon-wifi::before {
+    content: "\e9e6";
+}
+
+.galeria {
+    display: grid;
+    grid-template-areas: 
+        'galeria-1 galeria-2 galeria-3'
+        'galeria-4 galeria-4 galeria-6'
+        'galeria-5 galeria-5 galeria-6'
+        'galeria-7 galeria-7 galeria-7';
+    width: 70%;
+    gap: 15px;
+    margin: 20px auto;
+}
+
+.galeria .galeria-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#galeria-1 {
+    grid-area: galeria-1;
+    background-image: url("../img/img8.jpg");
+    height: 250px;
+}
+
+#galeria-2 {
+    grid-area: galeria-2;
+    background-image: url("../img/img2.jpg");
+    height: 250px;
+}
+
+#galeria-3 {
+    grid-area: galeria-3;
+    background-image: url("../img/img3.jpg");
+    height: 250px;
+}
+
+#galeria-4 {
+    grid-area: galeria-4;
+    background-image: url("../img/img4.jpg");
+}
+
+#galeria-5 {
+    grid-area: galeria-5;
+    background-image: url("../img/img5.jpg");
+}
+
+#galeria-6 {
+    grid-area: galeria-6;
+    background-image: url("../img/img6.jpg");
+    height: 250px;
+}
+
+#galeria-7 {
+    grid-area: galeria-7;
+    background-image: url("../img/img7.jpg");
+    height: 125px;
+}
+
+
