@@ -19,6 +19,7 @@ body {
     position: relative;
     width: 100%;  
     font-family: 'Mirai', sans-serif;  
+    font-size: 14PX;
 }
 
 .banner {
@@ -31,11 +32,11 @@ body {
     background-image: url("../img/banner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: -300px;
 }
 
 .title {
-    font-size: 70px;
+    font-size: 60px;
+    font-weight: 500;
     color: white;
 }
 
@@ -45,14 +46,15 @@ body {
     align-items: center;
     justify-content: center;
     gap: 50px;
+    padding: 0 50px;
     width: 100%;
     height: 50vh;
 }
 
 .foto {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 325px;
+    height: 325px;
     background-image: url("../img/img1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -65,20 +67,28 @@ body {
     row-gap: 15px;
     text-align: left;
     width: 500px;
-    height: 300px;
+}
+
+.about #title1 {
+    font-size: 24PX;
+}
+
+.about #title2 {
+    font-size: 36PX;
 }
 
 .tooltip-container {
     position: relative;
 }
 
-.button {
+.tooltip-container .button {
     background-color: white;
     border: 2px solid black;
     border-radius: 30px;
     padding: 10px;
     font-weight: bold;
     width: 50%;
+    margin-top: 14px;
     cursor: pointer;
 }
 
@@ -87,29 +97,32 @@ body {
     display: none;
     padding: 30px 15px 15px;
     border: 5px solid black;
+    border-radius: 5px;
     background-color: white;
 }
 
 .tooltip-container .tooltip .close-tooltip {
     position: absolute;
-    right: 10px;
-    top: 5px;
+    right: 0;
+    top: -8px;
     font-size: 30px;
+    border: none;
+    background-color: transparent;
     transform: rotate(45deg);
     cursor: pointer;
 }
 
 .tooltip-container .tooltip .tooltip-arrow {
     position: absolute;
-    bottom:-19px;
-    left: 30px;
+    bottom: -17px;
+    left: 40px;
     display: block;
-    border-left: 5px solid black;
+    border-right: 5px solid black;
     border-bottom: 5px solid black;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background-color: white;
-    transform: rotate(-45deg);
+    transform: rotate(45deg) skew(10deg, 10deg);
 }
 
 .ventajas {
@@ -126,7 +139,7 @@ body {
 
 .ventajas .h2Ventajas {
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;
     color: white;
     width: 50%;
 }
@@ -140,7 +153,7 @@ body {
 }
 
 .ventajas .icon {
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .icon-parking::before {
@@ -168,52 +181,113 @@ body {
         'galeria-7 galeria-7 galeria-7';
     width: 70%;
     gap: 15px;
-    margin: 20px auto;
+    margin: 70px auto;
 }
 
 .galeria .galeria-img {
+    display: flex;
     background-size: cover;
     background-repeat: no-repeat;
+    align-items: flex-end;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
 }
 
 #galeria-1 {
     grid-area: galeria-1;
-    background-image: url("../img/img8.jpg");
-    height: 250px;
+    background-image: url("../img/img2.jpg");
+    height: 400px;
 }
 
 #galeria-2 {
     grid-area: galeria-2;
-    background-image: url("../img/img2.jpg");
-    height: 250px;
+    background-image: url("../img/img3.jpg");
+    height: 400px;
 }
 
 #galeria-3 {
     grid-area: galeria-3;
-    background-image: url("../img/img3.jpg");
-    height: 250px;
+    background-image: url("../img/img4.jpg");
+    height: 400px;
 }
 
 #galeria-4 {
     grid-area: galeria-4;
-    background-image: url("../img/img4.jpg");
+    background-image: url("../img/img5.jpg");
 }
 
 #galeria-5 {
     grid-area: galeria-5;
-    background-image: url("../img/img5.jpg");
+    background-image: url("../img/img6.jpg");
+    background-position-y: -150px;
 }
 
 #galeria-6 {
     grid-area: galeria-6;
-    background-image: url("../img/img6.jpg");
-    height: 250px;
+    background-image: url("../img/img7.jpg");
+    background-position-x: -250px;
+    height: 400px;
 }
 
 #galeria-7 {
     grid-area: galeria-7;
-    background-image: url("../img/img7.jpg");
-    height: 125px;
+    background-image: url("../img/img8.jpg");
+    background-position-y: -150px;
+    height: 192.5px;
+}
+
+
+
+@media only screen and (max-width:767px) {
+    .banner {
+        height: 40vh;
+    }
+
+    .info {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .about {
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .tooltip-container .tooltip .tooltip-arrow {
+        left: auto;
+        display: inline-block;
+    }
+
+    .ventajas .h2Ventajas {
+        font-size: 28px;
+    }
+
+    .ventajas .icons {
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
+    }
+
+    .galeria {
+        grid-template-areas: 
+            'galeria-1 galeria-1 galeria-1'
+            'galeria-2 galeria-2 galeria-2'
+            'galeria-3 galeria-3 galeria-3'
+            'galeria-4 galeria-4 galeria-4'
+            'galeria-5 galeria-5 galeria-5'
+            'galeria-6 galeria-6 galeria-6'
+            'galeria-7 galeria-7 galeria-7';
+    }
+
+    .galeria .galeria-img {
+        height: 50vh;
+    }
+
+    #galeria-5,
+    #galeria-7 {
+        height: 50vh;
+        background-position-y: 0;
+    }
 }
 
 
